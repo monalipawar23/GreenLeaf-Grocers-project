@@ -1,0 +1,5 @@
+{% extends "base.html" %}{% block content %}<h1>{{'Edit' if product else 'Add'}} Product</h1><form class="card formgrid" method="post">
+<label>Product name<input name="name" required value="{{product.name if product else ''}}"></label><label>Category<input name="category" required value="{{product.category if product else ''}}"></label>
+<label>Unit price (₹)<input type="number" min="0" step=".01" name="unit_price" required value="{{product.unit_price if product else ''}}"></label><label>Stock quantity<input type="number" min="0" name="stock_qty" required value="{{product.stock_qty if product else 0}}"></label>
+<label>Reorder level<input type="number" min="0" name="reorder_level" required value="{{product.reorder_level if product else 5}}"></label><label>Expiry date<input type="date" name="expiry_date" value="{{product.expiry_date if product and product.expiry_date else ''}}"></label>
+<div><button>Save Product</button> <a href="{{url_for('products')}}">Cancel</a></div></form>{% endblock %}

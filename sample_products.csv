@@ -1,0 +1,3 @@
+name,category,unit_price,stock_qty,reorder_level,expiry_date
+Green Apples,Fruits,130,30,8,2027-02-15
+Fresh Milk,Dairy,62,25,6,2026-12-10

@@ -1,0 +1,1 @@
+{% extends "base.html" %}{% block content %}<h1>Import Products from CSV</h1><form class="card" method="post" enctype="multipart/form-data"><p>Required columns: <code>name,category,unit_price,stock_qty</code>. Optional: <code>reorder_level,expiry_date</code>.</p><input type="file" name="file" accept=".csv" required><button>Import CSV</button></form>{% endblock %}
